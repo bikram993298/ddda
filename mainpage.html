@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainpage.css">
+    <title>Tinder-like Swiping</title>
+</head>
+<body>
+    <div id="card-stack">
+        
+        <div class="card">
+            <img src="shri.jpg" alt="Profile 1">
+            <div class="info">
+                <h2>SHRIPARNA ADHIKARY</h2>
+                <p>MBBS</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images.jpg" alt="Profile 1">
+            <div class="info">
+                <h2>Profile 1</h2>
+                <p>Description of profile 1</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="girls-images-for-dp.jpg" alt="Profile 2">
+            <div class="info">
+                <h2>Profile 2</h2>
+                <p>Description of profile 2</p>
+            </div>
+        </div>
+        <!-- Add more cards here -->
+        <div class="card">
+            <img src="licensed-image.jpg" alt="Profile 2">
+            <div class="info">
+                <h2>BAREN CH BARMAN</h2>
+                <p>TEACHER</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="pic1.jpg" alt="Profile 2">
+            <div class="info">
+                <h2>Profile 2</h2>
+                <p>Description of profile 2</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMG_20220328_160625.jpg" alt="Profile 2">
+            <div class="info">
+                <h2>BIKRAM</h2>
+                <p>ENGINEER</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="prev-btn"><img src="cros.png" style="width: 50px; height: 70px;"></button>
+    <button id="next-btn"><img src="right.png" style="width: 50px; height: 70px;"></button>
+
+  
+
+    <script src="mainpage.js"></script>
+    <script>
+        const cards = document.querySelectorAll('.card');
+        let currentIndex = 0;
+
+        function showCard(index) {
+            cards.forEach((card, i) => {
+                if (i === index) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function nextCard() {
+            currentIndex = (currentIndex + 1) % cards.length;
+            showCard(currentIndex);
+        }
+
+        function prevCard() {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            showCard(currentIndex);
+        }
+
+        document.getElementById('next-btn').addEventListener('click', nextCard);
+        document.getElementById('prev-btn').addEventListener('click', prevCard);
+
+        // Show the first card initially
+        showCard(currentIndex);
+    </script>
+</body>
+</html>

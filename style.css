@@ -1,0 +1,27 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.splash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.splash img {
+    max-width: 90%;
+    max-height: 90%;
+    width: 62px;
+    animation: fadeOut 5s ease forwards;
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
