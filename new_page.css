@@ -198,3 +198,36 @@ body, html {
       margin: 10px auto;
   }
 }
+/* Media Query for smartphones */
+@media only screen and (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav img {
+    margin: 10px 0;
+  }
+
+  .next p {
+    font-size: 35px; /* Decrease font size for smaller screens */
+  }
+
+  .button-85,
+  #login1,
+  #login2,
+  #login3 {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .modal-content {
+    width: 90%; /* Adjust modal width for smaller screens */
+  }
+
+  #login3 img,
+  #login1 img,
+  #login2 img {
+    width: 25px; /* Decrease icon size for smaller screens */
+  }
+}
