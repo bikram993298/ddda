@@ -183,10 +183,14 @@ body, html {
 
 /* Media Query for smartphones */
 @media only screen and (max-width: 600px) {
-  .nav {
-      flex-direction: column;
-      align-items: center;
-  }
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
 
   .nav img {
       margin: 10px 0;
